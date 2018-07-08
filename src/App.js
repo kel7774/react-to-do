@@ -38,8 +38,8 @@ class App extends Component {
     return (
       <div className="App">
       <ul>
-       { this.state.todos.map( (todo, index) =>
-            <ToDo key={ index } description = { todo.description } isCompleted={ todo.isCompleted } toggleComplete= { () this.toggleComplete(index) } />
+       { this.state.todos.map( (todo, index) => // added the arrow in this branch to make up for the mistake in the last checkpoint
+            <ToDo key={ index } description = { todo.description } isCompleted={ todo.isCompleted } toggleComplete= { () => this.toggleComplete(index) } />
           )}
       </ul>
         <form onSubmit={ (e) => this.handleSubmit(e) }>
